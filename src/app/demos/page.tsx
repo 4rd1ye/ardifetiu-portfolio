@@ -2,7 +2,7 @@ import Link from "next/link";
 import { demos } from "../../data/demos";
 
 const DemosPage = () => (
-  <section>
+  <section className="section">
     <h1>Live demos</h1>
     <p>Build, host, and showcase projects powered by Spring Boot and Next.js.</p>
     <div className="card-grid">
@@ -14,7 +14,9 @@ const DemosPage = () => (
           <p>
             <strong>Stack:</strong> {demo.stack.join(", ")}
           </p>
-          <Link href={demo.href}>Open demo →</Link>
+          <Link className="text-link" href={demo.href}>
+            Open demo
+          </Link>
         </article>
       ))}
     </div>

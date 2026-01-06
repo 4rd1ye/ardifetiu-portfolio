@@ -11,16 +11,18 @@ const DemoPage = async ({ params }: DemoPageProps) => {
 
   if (!demo) {
     return (
-      <section>
+      <section className="section">
         <h1>Demo not found</h1>
         <p>Pick another demo from the list.</p>
-        <Link href="/demos">Back to demos</Link>
+        <Link className="text-link" href="/demos">
+          Back to demos
+        </Link>
       </section>
     );
   }
 
   return (
-    <section>
+    <section className="section">
       <span className="badge">{demo.status === "live" ? "Live" : "Planned"}</span>
       <h1>{demo.title}</h1>
       <p>{demo.description}</p>
@@ -36,7 +38,9 @@ const DemoPage = async ({ params }: DemoPageProps) => {
         </ul>
       </div>
       <p>
-        <Link href="/demos">← Back to demos</Link>
+        <Link className="text-link" href="/demos">
+          Back to demos
+        </Link>
       </p>
     </section>
   );
